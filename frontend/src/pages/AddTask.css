@@ -1,0 +1,95 @@
+.add-task-container {
+    width: 430px;
+    max-width: 90%;
+    padding: 38px;
+    margin: 70px auto;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(22, 35, 43, 0.1);
+    animation: fadeUp 0.5s ease;
+    transition: 0.3s ease;
+}
+
+.add-task-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(22, 35, 43, 0.14);
+}
+
+.add-task-container h2 {
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 26px;
+    color: #16232b;
+    margin-bottom: 26px;
+}
+
+.add-task-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.add-task-container input,
+.add-task-container textarea {
+    padding: 13px 15px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    color: #16232b;
+    background: #f7f9f8;
+    border: 2px solid #e2e8e5;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.add-task-container input:hover,
+.add-task-container textarea:hover {
+    border-color: #a9c3b5;
+}
+
+.add-task-container input:focus,
+.add-task-container textarea:focus {
+    background: white;
+    border-color: #2f6b4e;
+    box-shadow: 0 0 0 4px rgba(47, 107, 78, 0.12);
+}
+
+.add-task-container textarea {
+    height: 120px;
+    resize: none;
+}
+
+.add-task-container button {
+    margin-top: 6px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: #2f6b4e;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #234f3a;
+    transition: 0.2s ease;
+}
+
+.add-task-container button:hover {
+    transform: translateY(-2px);
+}
+
+.add-task-container button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #234f3a;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 550px) {
+    .add-task-container {
+        padding: 25px;
+    }
+}

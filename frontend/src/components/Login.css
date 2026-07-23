@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+
+/* ===============================
+   GLOBAL LOGIN PAGE
+==================================*/
+
+.login-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    background:#eef2f0;
+
+    background-image:repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 38px,
+        rgba(22,35,43,0.05) 39px
+    );
+
+    font-family:"Inter",sans-serif;
+
+}
+
+
+/* ===============================
+   LOGIN CARD
+==================================*/
+
+.login-box{
+
+    width:400px;
+
+    padding:40px;
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 15px 40px rgba(22,35,43,0.12);
+
+    animation:showBox .5s ease;
+
+    transition:.3s ease;
+
+}
+
+
+.login-box:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 20px 45px rgba(22,35,43,0.16);
+
+}
+
+
+/* ===============================
+   BACK LINK
+==================================*/
+
+
+.back-link{
+
+    display:inline-block;
+
+    font-size:13px;
+
+    color:#5c6b66;
+
+    text-decoration:none;
+
+    margin-bottom:16px;
+
+    transition:.2s;
+
+}
+
+
+.back-link:hover{
+
+    color:#2f6b4e;
+
+}
+
+
+/* ===============================
+   LABEL
+==================================*/
+
+
+.auth-eyebrow{
+
+    display:inline-block;
+
+    font-family:"IBM Plex Mono",monospace;
+
+    font-size:12px;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:#2f6b4e;
+
+    background:rgba(47,107,78,.08);
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    margin-bottom:14px;
+
+}
+
+
+/* ===============================
+   HEADING
+==================================*/
+
+
+.login-box h2{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:26px;
+
+    color:#16232b;
+
+    margin:0 0 8px;
+
+}
+
+
+.login-box p{
+
+    color:#5c6b66;
+
+    font-size:14px;
+
+    margin-bottom:26px;
+
+}
+
+
+/* ===============================
+   FORM
+==================================*/
+
+
+.login-box form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+
+
+.login-box input{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:2px solid #e2e8e5;
+
+    border-radius:10px;
+
+    background:#f7f9f8;
+
+    font-size:15px;
+
+    font-family:"Inter",sans-serif;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+
+
+.login-box input:hover{
+
+    border-color:#a9c3b5;
+
+}
+
+
+
+.login-box input:focus{
+
+    background:#fff;
+
+    border-color:#2f6b4e;
+
+    box-shadow:
+    0 0 0 4px rgba(47,107,78,.12);
+
+}
+
+
+
+/* ===============================
+   BUTTON
+==================================*/
+
+
+.login-box button{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2f6b4e;
+
+    color:#fff;
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 4px 0 #234f3a;
+
+    transition:.2s;
+
+}
+
+
+
+.login-box button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.login-box button:active{
+
+    transform:translateY(2px);
+
+    box-shadow:
+    0 2px 0 #234f3a;
+
+}
+
+
+
+/* ===============================
+   SIGNUP LINK
+==================================*/
+
+
+.signup-link{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    color:#5c6b66;
+
+    font-size:14px;
+
+}
+
+
+
+.signup-link a{
+
+    color:#2f6b4e;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+
+
+.signup-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+/* ===============================
+   ANIMATION
+==================================*/
+
+
+@keyframes showBox{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LARGE DESKTOP 1600px+
+=====================================================*/
+
+
+@media (min-width:1600px){
+
+
+    .login-box{
+
+        width:480px;
+
+        padding:55px;
+
+    }
+
+
+    .login-box h2{
+
+        font-size:30px;
+
+    }
+
+
+}
+
+
+
+/* =====================================================
+   DESKTOP / LAPTOP
+=====================================================*/
+
+
+@media (max-width:1200px){
+
+
+    .login-box{
+
+        width:420px;
+
+    }
+
+
+}
+
+
+
+/* =====================================================
+   TABLET
+=====================================================*/
+
+
+@media (max-width:768px){
+
+
+    .login-container{
+
+        padding:30px 20px;
+
+    }
+
+
+
+    .login-box{
+
+        width:100%;
+
+        max-width:450px;
+
+        padding:35px 30px;
+
+    }
+
+
+
+}
+
+
+
+/* =====================================================
+   LARGE MOBILE
+=====================================================*/
+
+
+@media (max-width:576px){
+
+
+    .login-container{
+
+        padding:20px 15px;
+
+    }
+
+
+
+    .login-box{
+
+        width:100%;
+
+        padding:28px 22px;
+
+        border-radius:14px;
+
+    }
+
+
+
+    .login-box h2{
+
+        font-size:22px;
+
+    }
+
+
+
+    .login-box p{
+
+        font-size:13px;
+
+    }
+
+
+
+    .login-box input{
+
+        padding:12px;
+
+        font-size:14px;
+
+    }
+
+
+
+    .login-box button{
+
+        padding:12px;
+
+        font-size:14px;
+
+    }
+
+
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+=====================================================*/
+
+
+@media (max-width:375px){
+
+
+    .login-container{
+
+        padding:15px;
+
+    }
+
+
+
+    .login-box{
+
+        padding:22px 18px;
+
+    }
+
+
+
+    .login-box h2{
+
+        font-size:20px;
+
+    }
+
+
+
+    .auth-eyebrow{
+
+        font-size:11px;
+
+    }
+
+
+
+    .signup-link{
+
+        font-size:13px;
+
+    }
+
+
+
+}
