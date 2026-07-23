@@ -11,8 +11,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch(
-                "https://taskflow-mern-zth6.onrender.com/api/auth/login",
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, 
                 {
                     method: "POST",
                     headers: {
