@@ -32,11 +32,8 @@ const app = express();
 
 
 app.use(cors({
-
-    origin:"http://localhost:5173",
-
-    credentials:true
-
+    origin: "https://task-flow-mern.vercel.app",
+    credentials: true
 }));
 
 
@@ -65,7 +62,7 @@ const PORT = process.env.PORT || 5000;
 
 
 
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
 
 
     console.log(`Server Running on ${PORT}`);
