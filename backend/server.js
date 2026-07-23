@@ -32,7 +32,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: "https://task-flow-mern.vercel.app",
+    origin: "https://task-flow-mern-ten.vercel.app",
     credentials: true
 }));
 
