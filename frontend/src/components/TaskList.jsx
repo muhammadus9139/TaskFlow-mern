@@ -18,7 +18,7 @@ function TaskList() {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/tasks",
+                "https://taskflow-mern-zth6.onrender.com/api/tasks",
                 {
                     credentials: "include"
                 }
@@ -63,17 +63,11 @@ function TaskList() {
         try {
 
             const response = await fetch(
-
-                `http://localhost:5000/api/tasks/${id}`,
-
+                `https://taskflow-mern-zth6.onrender.com/api/tasks/${id}`,
                 {
-
                     method: "DELETE",
-
                     credentials: "include"
-
                 }
-
             );
 
             const data = await response.json();
@@ -125,27 +119,17 @@ function TaskList() {
         try {
 
             const response = await fetch(
-
-                "http://localhost:5000/api/tasks/delete-many",
-
+                "https://taskflow-mern-zth6.onrender.com/api/tasks/delete-many",
                 {
-
                     method: "DELETE",
-
                     credentials: "include",
-
                     headers: {
                         "Content-Type": "application/json"
                     },
-
                     body: JSON.stringify({
-
                         ids: selectedTasks
-
                     })
-
                 }
-
             );
 
             const data = await response.json();
