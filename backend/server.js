@@ -31,9 +31,14 @@ const app = express();
 
 
 
+const allowedOrigins = [
+  "https://task-flow-mern-ten.vercel.app",
+  "https://task-flow-mern-q2ll7yhp6-muhammadus.vercel.app"
+];
+
 app.use(cors({
-    origin: "https://task-flow-mern-ten.vercel.app",
-    credentials: true
+  origin: allowedOrigins,
+  credentials: true
 }));
 
 
