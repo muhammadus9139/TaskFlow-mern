@@ -14,16 +14,13 @@ function AddTask() {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/tasks",
+                "https://taskflow-mern-zth6.onrender.com/api/tasks",
                 {
                     method: "POST",
-
                     credentials: "include",
-
                     headers: {
                         "Content-Type": "application/json"
                     },
-
                     body: JSON.stringify({
                         title,
                         description
