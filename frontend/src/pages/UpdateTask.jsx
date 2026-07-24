@@ -11,7 +11,6 @@ function UpdateTask() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
 
-
     // ===========================
     // Get Single Task
     // ===========================
@@ -21,15 +20,10 @@ function UpdateTask() {
         try {
 
             const response = await fetch(
-
-                `http://localhost:5000/api/tasks/${id}`,
-
+                `${import.meta.env.VITE_API_URL}/api/tasks/${id}`,
                 {
-
                     credentials: "include"
-
                 }
-
             );
 
             const data = await response.json();
@@ -49,8 +43,7 @@ function UpdateTask() {
 
             }
 
-        }
-        catch (error) {
+        } catch (error) {
 
             console.log(error);
 
@@ -59,8 +52,6 @@ function UpdateTask() {
         }
 
     };
-
-
 
     // ===========================
     // Update Task
@@ -71,30 +62,18 @@ function UpdateTask() {
         try {
 
             const response = await fetch(
-
-                `http://localhost:5000/api/tasks/${id}`,
-
+                `${import.meta.env.VITE_API_URL}/api/tasks/${id}`,
                 {
-
                     method: "PUT",
-
                     credentials: "include",
-
                     headers: {
-
                         "Content-Type": "application/json"
-
                     },
-
                     body: JSON.stringify({
-
                         title,
                         description
-
                     })
-
                 }
-
             );
 
             const data = await response.json();
@@ -113,9 +92,7 @@ function UpdateTask() {
 
             }
 
-        }
-
-        catch (error) {
+        } catch (error) {
 
             console.log(error);
 
@@ -124,8 +101,6 @@ function UpdateTask() {
         }
 
     };
-
-
 
     // ===========================
     // Form Submit
@@ -139,15 +114,11 @@ function UpdateTask() {
 
     };
 
-
-
     useEffect(() => {
 
         getTask();
 
     }, [id]);
-
-
 
     return (
 
@@ -158,27 +129,18 @@ function UpdateTask() {
             <form onSubmit={handleSubmit}>
 
                 <input
-
                     type="text"
-
                     value={title}
-
                     onChange={(e) => setTitle(e.target.value)}
-
                 />
 
                 <textarea
-
                     value={description}
-
                     onChange={(e) => setDescription(e.target.value)}
-
                 />
 
                 <button type="submit">
-
                     Update Task
-
                 </button>
 
             </form>
